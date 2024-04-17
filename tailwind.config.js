@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        './src/**/*.svelte',
-        './src/**/*.html'
-    ],
+    content: ['./src/**/*.{svelte,js,ts,html}'],
     theme: {
         extend: {}
     },
-    plugins: []
-}
-
+    plugins: [
+        // eslint-disable-next-line
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography')
+    ]
+};
